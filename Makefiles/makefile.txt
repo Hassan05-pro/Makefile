@@ -1,0 +1,11 @@
+all: info
+info: main.o fanctions.o info.o
+	gcc main.o functions.o info.o -o info
+main.o: main.c
+	gcc -c main.c
+functions.o: functions.c
+	gcc -c functions.c
+info.o: info.c
+	gcc -c info.c
+clean: 
+	rm *o info
